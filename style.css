@@ -1,0 +1,594 @@
+
+/* =========================
+   NEBULA — UMUMIY DIZAYN
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #080d0b;
+    --surface: #101914;
+    --surface-light: #16231b;
+    --green: #8df542;
+    --green-dark: #68c92a;
+    --white: #f4f7f4;
+    --muted: #a3b1a6;
+    --border: rgba(255, 255, 255, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease, background 0.3s ease,
+                transform 0.3s ease, border-color 0.3s ease;
+}
+
+p {
+    color: var(--muted);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin-inline: auto;
+}
+
+/* HEADER */
+
+.header {
+    min-height: 82px;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+    background: rgba(8, 13, 11, 0.95);
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.nav a {
+    color: var(--muted);
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--green);
+    background: rgba(141, 245, 66, 0.09);
+}
+
+/* UMUMIY ELEMENTLAR */
+
+.tag {
+    display: inline-block;
+    color: var(--green);
+    background: rgba(141, 245, 66, 0.09);
+    border: 1px solid rgba(141, 245, 66, 0.2);
+    border-radius: 30px;
+    padding: 6px 13px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+}
+
+h1 {
+    font-size: clamp(38px, 5.5vw, 64px);
+    margin-bottom: 22px;
+}
+
+h2 {
+    font-size: clamp(27px, 4vw, 38px);
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+h1 span,
+h2 span {
+    color: var(--green);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--green);
+    color: #10180c;
+    padding: 13px 21px;
+    border: 1px solid var(--green);
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+}
+
+.btn:hover {
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(141, 245, 66, 0.13);
+}
+
+.btn-outline {
+    color: var(--white);
+    background: transparent;
+    border-color: var(--border);
+}
+
+.btn-outline:hover {
+    color: var(--green);
+    background: var(--surface);
+    border-color: var(--green);
+}
+
+section {
+    animation: fade-up 0.8s ease both;
+}
+
+/* BOSH SAHIFA */
+
+.hero {
+    min-height: 590px;
+    padding-block: 80px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.hero-content {
+    animation: fade-up 0.8s ease both;
+}
+
+.hero-content > p,
+.page-hero > p {
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-image {
+    position: relative;
+    animation: fade-in 1.2s ease both;
+}
+
+.hero-image img {
+    aspect-ratio: 6 / 5;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+}
+
+.image-label {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    padding: 13px;
+    border-radius: 10px;
+    background: rgba(8, 13, 11, 0.9);
+    font-size: 13px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* BO'LIMLAR */
+
+.section {
+    padding-block: 65px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 38px;
+}
+
+.section-heading p {
+    margin-top: 10px;
+}
+
+.grid-2,
+.grid-3,
+.contact-grid {
+    display: grid;
+    gap: 22px;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: transform 0.3s ease, border-color 0.3s ease,
+                background 0.3s ease;
+}
+
+.card:hover,
+.idea-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(141, 245, 66, 0.55);
+}
+
+.card-highlight {
+    background: linear-gradient(135deg, #142119, #101914);
+    border-color: rgba(141, 245, 66, 0.25);
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.card-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    color: var(--green);
+    background: rgba(141, 245, 66, 0.1);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.step {
+    display: inline-block;
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+/* ICHKI SAHIFA */
+
+.page-hero {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    animation: fade-up 0.8s ease both;
+}
+
+.page-hero > p {
+    font-size: 16px;
+}
+
+.wide-image {
+    max-height: 390px;
+    aspect-ratio: 16 / 7;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    margin-top: 25px;
+}
+
+/* G'OYA KARTALARI */
+
+.idea-card {
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.idea-card img {
+    aspect-ratio: 6 / 4;
+    transition: transform 0.5s ease;
+}
+
+.idea-card:hover img {
+    transform: scale(1.04);
+}
+
+.idea-content {
+    padding: 22px;
+}
+
+.idea-content .tag {
+    margin-bottom: 14px;
+}
+
+.idea-content h3 {
+    font-size: 18px;
+}
+
+.idea-content p {
+    font-size: 14px;
+}
+
+/* MA'LUMOT SAHIFASI */
+
+.timeline {
+    max-width: 760px;
+    margin: auto;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 22px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.timeline-item .step {
+    min-width: 42px;
+}
+
+.timeline-item p {
+    font-size: 14px;
+}
+
+/* CTA */
+
+.cta {
+    text-align: center;
+    padding: 55px 25px;
+    margin-top: 35px;
+    margin-bottom: 75px;
+    border: 1px solid rgba(141, 245, 66, 0.2);
+    border-radius: 20px;
+    background: radial-gradient(
+        circle at top,
+        rgba(141, 245, 66, 0.08),
+        var(--surface) 70%
+    );
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+/* BOG'LANISH */
+
+.contact-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.contact-card {
+    overflow-wrap: anywhere;
+}
+
+.contact-value {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact-value:hover {
+    color: var(--white);
+}
+
+.contact-note {
+    text-align: center;
+    padding: 55px 20px;
+    margin-top: 35px;
+    border-top: 1px solid var(--border);
+}
+
+.contact-note p {
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 35px 5%;
+    border-top: 1px solid var(--border);
+    background: #060a08;
+}
+
+.footer .logo {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 13px;
+}
+
+.copyright {
+    margin-top: 18px;
+    color: #6e7b70;
+}
+
+/* ANIMATSIYALAR */
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* TELEFON VA PLANSHEТ */
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-block: 55px;
+    }
+
+    .hero-image {
+        max-width: 650px;
+    }
+
+    .grid-3,
+    .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        width: 91%;
+    }
+
+    .header {
+        padding: 18px 4%;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav {
+        gap: 4px;
+    }
+
+    .nav a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-block: 45px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .grid-2,
+    .grid-3,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding-block: 42px;
+    }
+
+    .card {
+        padding: 23px;
+    }
+
+    .page-hero {
+        padding-top: 50px;
+    }
+
+    .wide-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .cta {
+        padding: 38px 18px;
+        margin-bottom: 45px;
+    }
+}
+
+/* Harakatni kamaytirishni tanlagan foydalanuvchilar uchun */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
