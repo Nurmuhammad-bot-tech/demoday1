@@ -323,11 +323,13 @@ section {
 }
 
 .wide-image {
-    max-height: 390px;
-    aspect-ratio: 16 / 7;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    margin-top: 25px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+
+    
 }
 
 /* G'OYA KARTALARI */
